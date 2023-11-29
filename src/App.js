@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Vovio from "./components/Vovio";
+import Laudate from "./components/Laudate";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
 function App() {
+  const [mode, setMode] = useState("light");
+
+  function setModeHandler() {
+    setMode((prevstate) => {
+      if (prevstate === "light") {
+        return "dark";
+      }
+      return "light";
+    });
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route element={<Navbar mode={mode} setModeHandler={setModeHandler} />}>
+        <Route path="/" element={<Vovio mode={mode} />} />
+        <Route path="/laudate" element={<Laudate mode={mode} />} />
+      </Route>
+    </Routes>
   );
 }
 

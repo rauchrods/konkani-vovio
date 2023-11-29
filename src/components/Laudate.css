@@ -1,0 +1,27 @@
+.laudate {
+  padding-top: 5rem;
+  /* height: auto; */
+}
+
+.content {
+  padding: 0rem 8rem;
+}
+.laudate-light {
+  background-color: white;
+}
+.laudate-dark {
+  background-color: black;
+  color: white;
+}
+.video-wrapper {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media (width<600px) {
+  .content {
+    padding: 0rem 3.5rem;
+  }
+}

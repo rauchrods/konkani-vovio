@@ -1,0 +1,25 @@
+.vovio {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  padding: 4rem 6rem 0;
+}
+.vovio-light {
+  background-color: white;
+}
+.vovio-dark {
+  background-color: black;
+  color: white;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media (width<600px) {
+  .vovio {
+    padding: 4rem 3rem 0;
+  }
+}
