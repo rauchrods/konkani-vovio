@@ -9,7 +9,7 @@
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1.4rem;
   flex-wrap: wrap;
@@ -67,18 +67,15 @@ a:hover,
   border-bottom: 1px solid #ffcc70;
 }
 
-.color-mode{
+.color-mode {
   display: flex;
   align-items: center;
 }
-.color-mode>svg{
+.color-mode > svg {
   font-size: 1.6rem;
 }
 
 @media (width< 600px) {
-  .navbar {
-    justify-content: flex-end;
-  }
   .hamburger_menu {
     display: flex;
   }

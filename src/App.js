@@ -4,6 +4,7 @@ import Vovio from "./components/Vovio";
 import Laudate from "./components/Laudate";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+import Contact from "./components/Contact";
 function App() {
   const [mode, setMode] = useState("light");
 
@@ -21,6 +22,7 @@ function App() {
       <Route element={<Navbar mode={mode} setModeHandler={setModeHandler} />}>
         <Route path="/" element={<Vovio mode={mode} />} />
         <Route path="/laudate" element={<Laudate mode={mode} />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
   );

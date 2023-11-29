@@ -1,0 +1,9 @@
+.contact{
+    padding: 6rem 4rem;
+}
+
+.contact>form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

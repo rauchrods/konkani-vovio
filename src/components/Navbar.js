@@ -17,6 +17,9 @@ function Navbar({ setModeHandler, mode = "light" }) {
     <>
       <div className={"nav_container"}>
         <nav className={"navbar"}>
+          <span className="color-mode" onClick={setModeHandler}>
+            {mode === "light" ? <MdDarkMode /> : <MdLightMode />}
+          </span>
           <div className={"right_sec"}>
             <span>
               <NavLink end to={"/"}>
@@ -40,9 +43,6 @@ function Navbar({ setModeHandler, mode = "light" }) {
             >
               {"Contact Me"}
             </Button>
-            <span className="color-mode" onClick={setModeHandler}>
-              {mode === "light" ? <MdDarkMode /> : <MdLightMode />}
-            </span>
           </div>
           <div className={"hamburger_menu"} onClick={menuClickHandler}>
             {isMenuClicked ? <AiOutlineMenuUnfold /> : <AiOutlineMenu />}
@@ -73,9 +73,6 @@ function Navbar({ setModeHandler, mode = "light" }) {
             >
               {"Contact Me"}
             </Button>
-            <span className="color-mode" onClick={setModeHandler}>
-              {mode === "light" ? <MdDarkMode /> : <MdLightMode />}
-            </span>
           </div>
         )}
       </div>
